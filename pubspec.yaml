@@ -15,6 +15,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_core: ^2.15.0
   firebase_analytics: ^10.4.4
+  sms_autofill: ^2.3.0
 
 dev_dependencies:
   flutter_test:

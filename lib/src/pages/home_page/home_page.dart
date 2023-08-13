@@ -1,7 +1,9 @@
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_google_analytics_example/src/pages/otp_screen.dart';
 
 import '../../helper/helper_function.dart';
+import '../code_autofill_page.dart';
 import 'analytics_button.dart';
 
 class HomePage extends StatelessWidget {
@@ -35,6 +37,18 @@ class HomePage extends StatelessWidget {
             AnalyticsButton(
               onPress: purchaseAnalytics,
               label: 'Trigger purchase event',
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // navigate to OTP screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const OtpPage(),
+                  ),
+                );
+              },
+              child: Text('GO to OTP Screen'),
             ),
           ],
         ),
